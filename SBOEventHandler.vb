@@ -25,6 +25,8 @@ Imports ZXing
 
 Public Class SBOEventHandler
 
+#Region " Mang Eka " 
+
 #Region " Private Attribute "
 
     Private WithEvents oSBOApplication As SAPbouiCOM.Application
@@ -2745,6 +2747,10 @@ Public Class SBOEventHandler
     End Sub
 
 #End Region
+
+#End Region 
+
+#Region " Bang Tubagus "
 
 #Region "EFaktur Gabungan"
 
@@ -8112,6 +8118,10 @@ Public Class SBOEventHandler
     End Sub
 
 #End Region
+
+#End Region
+
+#Region " Maul "
 
 #Region " RighClickEvent Handler "
 
@@ -30226,6 +30236,10 @@ Public Class SBOEventHandler
     End Class
 #End Region
 
+#End Region // Mang Eka
+
+#Region " Hapis "
+
 #Region "setting faktur pajak (disabled udf & disable beberapa field saat update)"
 
     Public Sub DataEvent_Handler_SetupFaktur(ByRef BusinessObjectInfo As SAPbouiCOM.BusinessObjectInfo, ByRef BubbleEvent As Boolean)
@@ -32211,6 +32225,7 @@ Public Class SBOEventHandler
 #End Region
 
 #Region "Query To Xlsx"
+
     Public Sub JsonToExcel(fullPath As String, jsonTemplate As JObject, jsonObj As JObject)
         Dim jsonSheetList As JArray = jsonTemplate.Item("sheet")
         Dim jsonDataSetup As JObject = jsonTemplate.Item("data")
@@ -32371,6 +32386,10 @@ Public Class SBOEventHandler
 
 #End Region
 
+
+#End Region
+    
+    
     Private Sub AddUDTCortax()
 
         Utils.CreateUDT(oSBOCompany, "SOL_ADDINFO_REF", "AddInfo Ref", SAPbobsCOM.BoUTBTableType.bott_NoObject)
